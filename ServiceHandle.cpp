@@ -1,7 +1,7 @@
 #include "ServiceHandle.h"
 #include <utility>
 
-ServiceHandle::ServiceHandle(SC_HANDLE const serviceHandle) noexcept :handle(handle) {}
+ServiceHandle::ServiceHandle(SC_HANDLE const serviceHandle) noexcept :handle(serviceHandle) {}
 
 ServiceHandle::ServiceHandle(ServiceHandle&& serviceHandle) noexcept : handle(std::move(serviceHandle.handle)) {}
 
